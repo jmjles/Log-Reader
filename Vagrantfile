@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
 
     # Work around https://github.com/chef/bento/issues/661
     # apt-get -qqy upgrade
+    #config.vm.network "forwarded_port", guest: 80, host: 8080
     DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 
     apt-get -qqy install make zip unzip postgresql

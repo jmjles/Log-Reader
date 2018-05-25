@@ -1,11 +1,26 @@
 import psycopg2;
-conn = psycopg2.connect(dbname="news");
-cursor = conn.cursor();
-query = ('select lead from articles');
-cursor.execute(query);
+conn = psycopg2.connect(dbname='news')
+cursor = conn.cursor()
 
-results = cursor.fetchall();
-
+print('What are the most popular three articles of all time?')
+print('')
+query = ('select lead from articles')
+cursor.execute(query)
+results = cursor.fetchall()
+print (results)
+print('')
+print('Who are the most popular article authors of all time?')
+print('')
+query = ('select lead from articles')
+cursor.execute(query)
+results = cursor.fetchall()
+print (results)
+print('')
+print('On which days did more than 1% of requests lead to errors?')
+print('')
+query = ('select lead from articles')
+cursor.execute(query)
+results = cursor.fetchall()
 print (results)
 
 conn.close()
