@@ -1,6 +1,6 @@
 Log Reader
 =============
-This project's purpose is to read off specific data from a data base to answer questions by Udacity.
+This project's purpose is to read off specific data from a data base to answer questions by Udacity.  
 Requirments
 ------------
 
